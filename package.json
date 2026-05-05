@@ -1,0 +1,15 @@
+{
+  "name": "claude-octopus",
+  "version": "0.1.0",
+  "description": "Self-maintaining knowledge model system for Claude Code",
+  "bin": {
+    "claude-octopus": "./bin/cli.js"
+  },
+  "scripts": {
+    "install-hook": "node bin/cli.js install",
+    "status": "node bin/cli.js status"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
