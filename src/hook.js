@@ -157,7 +157,7 @@ process.stdin.on('end', () => {
   try {
     const { session_id, transcript_path, stop_reason, cwd = '' } = JSON.parse(input);
 
-    if (stop_reason !== 'end_turn') {
+    if (stop_reason && stop_reason !== 'end_turn') {
       log({ session_id, gate: 'skip', reason: `stop_reason=${stop_reason}` });
       return;
     }
